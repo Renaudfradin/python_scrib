@@ -1,3 +1,5 @@
+from facto import facto
+
 print("hello world")
 
 call = 17+35*2
@@ -69,29 +71,39 @@ else :
   print(f"{test['time']} n est pas présent")
 
 
-# techno = [
-#   {
-#     "directeur" : "personne1",
-#     "date" : "06/06/2000",
-#     "num_campagne" : 3,
-#     "send" : True,
-#     "entreprise" : ["auchan","carouf","scrib"]
-#   },
-#   {
-#     "directeur" : "personne2",
-#     "date" : "06/06/2000",
-#     "num_campagne" : 3,
-#     "send" : True,
-#     "entreprise" : ["auchan","carouf","scrib"]
-#   },
-#   {
-#     "directeur" : "personne3",
-#     "date" : "06/06/2000",
-#     "num_campagne" : 3,
-#     "send" : True,
-#     "entreprise" : ["auchan","carouf","scrib"]
-#   }
-# ]
+technos = [
+  {
+    "directeur" : "personne1",
+    "date" : "06/06/2000",
+    "num_campagne" : 3,
+    "send" : True,
+    "entreprise" : ["auchan","carouf","scrib"]
+  },
+  {
+    "directeur" : "personne2",
+    "date" : "06/06/2000",
+    "num_campagne" : 3,
+    "send" : True,
+    "entreprise" : ["auchan","carouf","scrib"]
+  },
+  {
+    "directeur" : "personne3",
+    "date" : "06/06/2000",
+    "num_campagne" : 3,
+    "send" : True,
+    "entreprise" : ["auchan","carouf","scrib"]
+  }
+]
 
-# print(techno)
+for techno in technos:
+  print(techno)
 
+
+
+capacite_maximale = 10
+capacite_actuelle = 3
+while capacite_actuelle < capacite_maximale:
+    capacite_actuelle += 1
+
+##print function facto
+print(facto(5))
