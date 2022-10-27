@@ -1,5 +1,3 @@
-from email.policy import default
-
 def facto(factoriel):
   resultatFacto = 1
   if factoriel > 0:

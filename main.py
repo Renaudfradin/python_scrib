@@ -1,4 +1,5 @@
 from facto import facto
+from Etl import getStatusCode, getContent, getAllTitles 
 
 print("hello world")
 
@@ -24,6 +25,9 @@ print(call)
 fruit = ["pomme","fraise","poire","banane"]
 print(fruit[0])
 
+for i in fruit:
+  print(i)
+  
 ##add element to list
 fruit.append("franboise")
 print(fruit)
@@ -107,3 +111,16 @@ while capacite_actuelle < capacite_maximale:
 
 ##print function facto
 print(facto(5))
+
+
+
+statusCode = getStatusCode("https://www.gov.uk/search/news-and-communications")
+print(f"c'est une {statusCode}")
+
+# content = getContent("https://www.gov.uk/search/news-and-communications")
+
+# print(content)
+
+titles = getAllTitles("https://www.gov.uk/search/news-and-communications")
+
+print(titles)
