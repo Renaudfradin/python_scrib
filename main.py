@@ -110,17 +110,16 @@ while capacite_actuelle < capacite_maximale:
     capacite_actuelle += 1
 
 ##print function facto
-print(facto(5))
+print(facto(-6))
 
 
 
-statusCode = getStatusCode("https://www.gov.uk/search/news-and-communications")
-print(f"c'est une {statusCode}")
+# statusCode = getStatusCode("https://www.gov.uk/search/news-and-communications")
+# print(f"c'est une {statusCode}")
 
 # content = getContent("https://www.gov.uk/search/news-and-communications")
 
 # print(content)
 
-titles = getAllTitles("https://www.gov.uk/search/news-and-communications")
+# titles = getAllTitles("https://www.gov.uk/search/news-and-communications")
 
-print(titles)
