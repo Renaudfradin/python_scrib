@@ -1,5 +1,5 @@
 from facto import facto
-from Etl import getStatusCode, getContent, getAllTitles 
+from Etl import getImgOneArctile, getStatusCode, getContent, getAllTitles 
 
 print("hello world")
 
@@ -44,7 +44,6 @@ fruit.sort()
 print(fruit)
 
 print(len(fruit))
-
 
 ##dictionnaire
 campagne = {
@@ -110,16 +109,24 @@ while capacite_actuelle < capacite_maximale:
     capacite_actuelle += 1
 
 ##print function facto
-print(facto(-6))
+print(facto(6))
 
-
-
-# statusCode = getStatusCode("https://www.gov.uk/search/news-and-communications")
-# print(f"c'est une {statusCode}")
+statusCode = getStatusCode("https://www.gov.uk/search/news-and-communications")
+print(f"c'est une {statusCode}")
 
 # content = getContent("https://www.gov.uk/search/news-and-communications")
 
 # print(content)
 
-# titles = getAllTitles("https://www.gov.uk/search/news-and-communications")
+titles = getAllTitles("https://www.gov.uk/search/news-and-communications")
 
+for title in titles:
+  t = title.string
+  print(t)
+
+
+imgList = getImgOneArctile("https://www.gov.uk/government/news/derailment-of-a-tram-near-highbury-vale-tram-stop")
+for img in imgList:
+  print(img['src'])
+
+# print(img)
