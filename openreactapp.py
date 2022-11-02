@@ -1,10 +1,11 @@
 import re
+from unittest import result
 
 folder = open("/Users/renaudfradin/Downloads/joon-38475a.webflow/index.html", "r")
-print(folder.read())
+# print("print folder",folder)
 htmlJ = folder.read()
 
-
+# print("print htmlJ",htmlJ)
 
 
 def filter_body_for_jsx(html, keep_body_class=True):
@@ -80,8 +81,25 @@ def html2jsx(html, remove_scripts=True):  # code a factorer, 3 fois meme chose, 
 
   return html
 
-jsx = html2jsx(htmlJ)
-print(jsx)
+# jsx = html2jsx(htmlJ)
+# print(jsx)
 
-result = filter_body_for_jsx(jsx)
+# result = filter_body_for_jsx(jsx)
 # print(result)
+# testchaine = "<body class='body'>"
+htmlSplit = htmlJ.split('\n')
+# print("print split",htmlJ.split('\n'))
+# startBody = htmlJ.startswith("<body")
+
+# print("print html",htmlSplit[10].startswith("<body"))
+
+i = 0
+resultaBody = ""
+while htmlSplit[i].startswith("<body") == False:
+  i=i+1
+  print("ligne",i)
+  resultaBody = htmlSplit[i]
+  
+print("resultat body",resultaBody)
+  
+# print(test.startswith("body"))
